@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clean working directory') {
             steps {
-                sh 'rm -rf python-jenkins-cicd.git'
+                sh 'rm -rf python-jenkins-cicd'
             }
         }
         stage('Pull from GitHub') {
