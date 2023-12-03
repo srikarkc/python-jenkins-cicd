@@ -2,19 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Pull from GitHub') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                sh 'git clone https://github.com/srikarkc/python-jenkins-cicd.git .'
+                sh 'ls'
             }
         }
     }
